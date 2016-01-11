@@ -1,0 +1,82 @@
+/*
+ Theme Name:     FEUNAP 2016
+ Theme URI:      http://www.feunap.cl/2016
+ Description:    Este tema se usará para la federación de ustediantes de la Universidad Arturo Prat
+ Author:         Oscar Fernandez & Cristian Aravena
+ Author URI:     http://www.computux.cl
+ Template:       twentysixteen
+ Version:        1.0.0
+*/
+ 
+/* Add Custom CSS after this line */
+
+/* Demo Johnson Box code courtesy of: http://hyperlinkcode.com/blog/html-johnson-box/ */
+
+
+@media screen and (min-width: 1em) {
+	body:not(.custom-background-image).admin-bar:before {
+		top: 0px;
+	}
+	body:not(.custom-background-image):before,
+	body:not(.custom-background-image):after {height: 0px;}
+	.site-header-menu{margin-left: auto;margin-right: 0;}
+	
+}
+#page{margin: 0;}
+#content{
+	background-color: #fff;
+}
+
+#masthead .sub-menu a{
+color:#000;
+}
+#masthead {
+background-color:#000;
+padding-bottom:0;
+	color: #fff;
+}
+
+#masthead a {
+color:#fff;
+}
+#masthead .site-description{color:#fff;}
+#masthead .sub-menu a{
+	background-color: #fff;
+	color:#000;
+}
+
+
+#primary{
+padding-top:2em;
+}
+
+
+.johnson1 {
+	padding: 20px;
+	background: #ffff99;
+	width: 90%;
+	margin: 20px auto;
+}
+.johnson6 {
+	padding: 20px;
+	background: #ffff99;
+	width: 90%;
+	margin: 20px auto;
+	border: 3px dashed #ee0000;
+}
+.johnson8 {
+	padding: 20px;
+	background: #ccffcc;
+	width: 90%;
+	margin: 20px auto;
+	border-left: 5px solid #ff8080;
+}
+
+/* Other Sample Code */
+
+.warning {
+	color: red;
+}
+.shadow {
+	box-shadow: 0 8px 8px -6px #333;
+}
