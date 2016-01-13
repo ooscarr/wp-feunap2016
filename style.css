@@ -51,6 +51,21 @@ padding-top:2em;
 }
 
 
+#secondary section{
+	margin-bottom:1.5em;
+}
+
+.featured-wrapper{
+	margin: -5em 0 .25em 0;
+}
+#featured div{
+	font-size: 1em;width: 100%;
+}
+#featured div h2{
+	font-size: 1.5em;
+}
+
+
 .johnson1 {
 	padding: 20px;
 	background: #ffff99;

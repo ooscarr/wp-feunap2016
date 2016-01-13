@@ -1,63 +1,88 @@
 <?php
-    /**
-     * The main template file
-     *
-     * This is the most generic template file in a WordPress theme
-     * and one of the two required files for a theme (the other being style.css).
-     * It is used to display a page when nothing more specific matches a query.
-     * E.g., it puts together the home page when no home.php file exists.
-     *
-     * @link http://codex.wordpress.org/Template_Hierarchy
-     *
-     * @package WordPress
-     * @subpackage Twenty_Sixteen
-     * @since Twenty Sixteen 1.0
-     */
-    
-    get_header(); ?>
+/**
+ * The template for displaying pages
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages and that
+ * other "pages" on your WordPress site will use a different template.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Sixteen
+ * @since Twenty Sixteen 1.0
+ */
+
+get_header(); ?>
 
 <div id="primary" class="content-area">
-<main id="main" class="site-main" role="main">
+	<main id="main" class="site-main" role="main">
+		<?php
+		// Start the loop.
+		while ( have_posts() ) : the_post();
 
-<?php if ( have_posts() ) : ?>
-
-<?php	echo do_shortcode( '[soliloquy id="200"]' ); ?>
-
-<?php /*if ( is_home() && ! is_front_page() ) : ?>
-<header>
-<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-</header>
-<?php endif;*/ ?>
-
+			// Include the page content template.
+			get_template_part( 'template-parts/content', 'page' );
+			
+			// Sticky Slider
+			// https://wordpress.org/plugins/sticky-slider/
+			if(function_exists('sticky_slider')) { sticky_slider(); }
+			
+			
+			/*
+			<ul>
+02
+// Define our WP Query Parameters
+03
+<?php $the_query = new WP_Query( 'posts_per_page=5' ); ?>
+04
+ 
+05
+// Start our WP Query
+06
+<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+07
+ 
+08
+// Display the Post Title with Hyperlink
+09
+<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+10
+ 
+11
+// Display the Post Excerpt
+12
+<li><?php the_excerpt(__('(more…)')); ?></li>
+13
+ 
+14
+// Repeat the process and reset once it hits the limit
+15
 <?php
-    // Start the loop.
-    while ( have_posts() ) : the_post();
-    
-				/*
-                 * Include the Post-Format-specific template for the content.
-                 * If you want to override this in a child theme, then include a file
-                 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                 */
-				get_template_part( 'template-parts/content', get_post_format() );
-    
-    // End the loop.
-    endwhile;
-    
-    // Previous/next page navigation.
-    the_posts_pagination( array(
-                                'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-                                'next_text'          => __( 'Next page', 'twentysixteen' ),
-                                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
-                                ) );
-    
-    // If no content, include the "No posts found" template.
-    else :
-    get_template_part( 'template-parts/content', 'none' );
-    
-    endif;
-    ?>
+16
+endwhile;
+17
+wp_reset_postdata();
+18
+?>
+19
+</ul>
+*/
+			
+			
+			dynamic_sidebar( 'home_wide_1' );
 
-</main><!-- .site-main -->
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) {
+				comments_template();
+			}
+
+			// End of the loop.
+		endwhile;
+		?>
+
+	</main><!-- .site-main -->
+
+	<?php get_sidebar( 'content-bottom' ); ?>
+
 </div><!-- .content-area -->
 
 <?php get_sidebar(); ?>
