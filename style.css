@@ -85,6 +85,28 @@ padding-top:2em;
 	font-size: 1.5em;
 }
 
+.rpwe-ul{
+	float:left;
+}
+
+
+@media screen and (min-width: 56.875em) {
+	.rpwe-ul{
+		width:100%;
+	}
+	.rpwe-block li{
+		width: 47%;
+	}
+	.rpwe-ul .rpwe-li:nth-child(2n+1){
+		float:left;
+		clear:left;
+	}
+	.rpwe-ul .rpwe-li:nth-child(2n){
+		float:right;
+		clear:right;
+	}
+}
+
 
 .johnson1 {
 	padding: 20px;

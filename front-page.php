@@ -26,7 +26,12 @@ get_header(); ?>
 			// https://wordpress.org/plugins/sticky-slider/
 			if(function_exists('sticky_slider')) { sticky_slider(); }
 			
-			
+			//t4b
+			if(get_option('t4b_option')==Enabled) {
+				if(function_exists(show_Featured_Post_Slider())) {
+					show_Featured_Post_Slider();
+				}
+			}
 			/*
 			<ul>
 02
