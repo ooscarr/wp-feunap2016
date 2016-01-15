@@ -85,8 +85,13 @@ padding-top:2em;
 	font-size: 1.5em;
 }
 
+.rpwe-block{
+	float: left;
+	clear:both;
+}
 .rpwe-ul{
 	float:left;
+	clear:both;
 }
 
 
@@ -107,6 +112,9 @@ padding-top:2em;
 	}
 }
 
+#content-bottom-widgets{
+	clear: both;
+}
 
 .johnson1 {
 	padding: 20px;
