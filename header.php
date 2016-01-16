@@ -40,9 +40,9 @@
 	<div class="site-inner">
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
 
-		<header id="masthead" class="site-header" role="banner" style="background:url(<?php
+		<header id="masthead" class="site-header" role="banner" style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.65) 100%),url('<?php
 		//https://wpbeaches.com/make-a-full-width-twenty-sixteen-header/
-		echo get_header_image()?>) center no-repeat;">
+		echo get_header_image()?>');">
 			<div class="site-header-main">
 				<div class="site-branding">
 					<?php if ( is_front_page() && is_home() ) : ?>

@@ -32,6 +32,8 @@ color:#000;
 }
 #masthead {
 background-color:#000;
+background-position: center;
+background-repeat: no-repeat;
 padding-top: 100px;
 padding-bottom:0;
 color: #fff;
@@ -48,9 +50,9 @@ color:#fff;
 }
 /* https://wpbeaches.com/make-a-full-width-twenty-sixteen-header/ */
 .site-header {
- background-size: cover !important; 
- min-height: 200px;
- margin-bottom: 20px;
+background-size: cover !important; 
+min-height: 200px;
+margin-bottom: 20px;
 }
 
 
