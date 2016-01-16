@@ -40,7 +40,9 @@
 	<div class="site-inner">
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
 
-		<header id="masthead" class="site-header" role="banner">
+		<header id="masthead" class="site-header" role="banner" style="background:url(<?php
+		//https://wpbeaches.com/make-a-full-width-twenty-sixteen-header/
+		echo get_header_image()?>) center no-repeat;">
 			<div class="site-header-main">
 				<div class="site-branding">
 					<?php if ( is_front_page() && is_home() ) : ?>
@@ -87,7 +89,7 @@
 				<?php endif; ?>
 			</div><!-- .site-header-main -->
 
-			<?php if ( get_header_image() ) : ?>
+			<?php //if ( get_header_image() ) : ?>
 				<?php
 					/**
 					 * Filter the default twentysixteen custom header sizes attribute.
@@ -98,14 +100,14 @@
 					 * for Custom Header. Default '(max-width: 709px) 85vw,
 					 * (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px'.
 					 */
-					$custom_header_sizes = apply_filters( 'twentysixteen_custom_header_sizes', '(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px' );
+					/*$custom_header_sizes = apply_filters( 'twentysixteen_custom_header_sizes', '(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px' );
 				?>
 				<div class="header-image">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id ) ); ?>" sizes="<?php echo esc_attr( $custom_header_sizes ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 					</a>
 				</div><!-- .header-image -->
-			<?php endif; // End header image check. ?>
+			<?php endif; // End header image check. */?>
 		</header><!-- .site-header -->
 
 		<div id="content" class="site-content">

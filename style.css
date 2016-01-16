@@ -32,8 +32,10 @@ color:#000;
 }
 #masthead {
 background-color:#000;
+padding-top: 100px;
 padding-bottom:0;
-	color: #fff;
+color: #fff;
+margin-bottom: 0;
 }
 
 #masthead a {
@@ -43,6 +45,12 @@ color:#fff;
 #masthead .sub-menu a{
 	background-color: #fff;
 	color:#000;
+}
+/* https://wpbeaches.com/make-a-full-width-twenty-sixteen-header/ */
+.site-header {
+ background-size: cover !important; 
+ min-height: 200px;
+ margin-bottom: 20px;
 }
 
 
