@@ -43,7 +43,7 @@
 		<header id="masthead" class="site-header" role="banner" style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.65) 100%),url('<?php
 		//https://wpbeaches.com/make-a-full-width-twenty-sixteen-header/
 		echo get_header_image()?>');">
-			<div class="site-header-main">
+			<div class="site-header-main" style="background-image:url('<?php echo get_site_icon_url(50);?>');">
 				<div class="site-branding">
 					<?php if ( is_front_page() && is_home() ) : ?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

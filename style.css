@@ -34,16 +34,28 @@ color:#000;
 background-color:#000;
 background-position: center;
 background-repeat: no-repeat;
-padding-top: 100px;
+padding-top: 30px;
 padding-bottom:0;
 color: #fff;
 margin-bottom: 0;
 }
 
-#masthead a {
+#masthead a,#menu-toggle {
 color:#fff;
 }
-#masthead .site-description{color:#fff;}
+#masthead .site-header-main{
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-image: none;
+}
+#masthead .site-title a{
+	display:block;
+	padding: 60px 0 0 43px;
+}
+#masthead .site-description{color:#fff;padding-left: 43px;}
+#site-header-menu{
+	margin-top: 80px;
+}
 #masthead .sub-menu a{
 	background-color: #fff;
 	color:#000;
@@ -53,6 +65,7 @@ color:#fff;
 background-size: cover !important; 
 min-height: 200px;
 margin-bottom: 20px;
+	margin:0;padding-left:2%;
 }
 
 
