@@ -53,8 +53,8 @@ color:#fff;
 	padding: 60px 0 0 43px;
 }
 #masthead .site-description{color:#fff;padding-left: 43px;}
-#site-header-menu{
-	margin-top: 80px;
+#site-header-menu,#menu-toggle{
+	margin-top: 100px;
 }
 #masthead .sub-menu a{
 	background-color: #fff;
