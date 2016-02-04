@@ -20,18 +20,11 @@ get_header(); ?>
 		while ( have_posts() ) : the_post();
 
 			// Include the page content template.
-			get_template_part( 'template-parts/content', 'page' );
+			//get_template_part( 'template-parts/content', 'page' );
 			
-			// Sticky Slider
-			// https://wordpress.org/plugins/sticky-slider/
-			if(function_exists('sticky_slider')) { sticky_slider(); }
+			//Agregué un plugin y este shortcode pone el slider en la portada
+			echo do_shortcode('[recent_post_slider design="design-4"]');
 			
-			//t4b
-			if(get_option('t4b_option')==Enabled) {
-				if(function_exists(show_Featured_Post_Slider())) {
-					show_Featured_Post_Slider();
-				}
-			}
 			/*
 			<ul>
 02
@@ -72,13 +65,12 @@ wp_reset_postdata();
 </ul>
 */
 			
-			
 			dynamic_sidebar( 'home_wide_1' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) {
+			/*if ( comments_open() || get_comments_number() ) {
 				comments_template();
-			}
+			}*/
 
 			// End of the loop.
 		endwhile;

@@ -108,6 +108,11 @@ padding-top:2em;
 	font-size: 1.5em;
 }
 
+/* TODO: Esto no funciona*/
+.recent-post-slider h2.wp-post-title{
+	color:#fff;
+}
+
 .rpwe-block{
 	float: left;
 	clear:both;
