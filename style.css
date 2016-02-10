@@ -7,7 +7,7 @@
  Template:       twentysixteen
  Version:        1.0.0
 */
- 
+ * {font-family: Montserrat, 'Helvetica Neue', sans-serif;}
 /* Add Custom CSS after this line */
 
 /* Demo Johnson Box code courtesy of: http://hyperlinkcode.com/blog/html-johnson-box/ */
@@ -60,6 +60,15 @@ color:#fff;
 	background-color: #fff;
 	color:#000;
 }
+#masthead .sub-menu a:hover{
+	background-color: #fc9;
+	color:#000;
+}
+.main-navigation .current-menu-item > a,
+.main-navigation .current-menu-ancestor > a {
+	background-color: #f60;
+}
+
 /* https://wpbeaches.com/make-a-full-width-twenty-sixteen-header/ */
 .site-header {
 background-size: cover !important; 
@@ -77,7 +86,10 @@ padding-top:2em;
 #secondary section{
 	margin-bottom:1.5em;
 }
-
+/* BUGFIX */
+section.widget_search{
+	clear:both;
+}
 
 #breadcrumbs{
     list-style:none;
@@ -139,6 +151,16 @@ padding-top:2em;
 		clear:right;
 	}
 }
+
+
+article .post-thumbnail{
+	text-align: center;
+}
+article .post-thumbnail img{
+	width: 100%;
+}
+
+
 
 #content-bottom-widgets{
 	clear: both;
