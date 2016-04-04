@@ -8,6 +8,8 @@ function theme_enqueue_styles() {
         array('parent-style')
     );
 }
+
+add_theme_support( 'post-thumbnails' );
 /**
  * Register our sidebars and widgetized areas.
  *
@@ -294,6 +296,30 @@ function custom_breadcrumbs() {
     }
        
 }
+
+
+function noticat( $atts ) {
+  
+    $atts = shortcode_atts( array(
+        'cat' => 1,
+    ), $atts );
+ 
+    $output .= '<ul>';
+			
+		$catquery = new WP_Query( 'cat='.$atts[ 'cat' ].'&posts_per_page=3' );
+		while($catquery->have_posts()) : $catquery->the_post();
+					
+			$output .= '<li>';
+			$output .= '<a href="'.get_the_permalink().'">'.get_the_title().'</a>';
+			$output .= '</li>';
+				
+		endwhile;
+    $output .= '</ul>';
+ 
+    return $output;
+ 
+}
+add_shortcode( 'noticat', 'noticat' );
 
 
 ?>

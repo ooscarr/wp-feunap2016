@@ -16,15 +16,17 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 		<?php
+		
+			//Agregué un plugin y este shortcode pone el slider en la portada
+			echo do_shortcode('[recent_post_slider design="design-4" limit="4"]');
+		
+		
 		// Start the loop.
 		while ( have_posts() ) : the_post();
 
 			// Include the page content template.
-			//get_template_part( 'template-parts/content', 'page' );
-			
-			//Agregué un plugin y este shortcode pone el slider en la portada
-			echo do_shortcode('[recent_post_slider design="design-4"]');
-			
+			get_template_part( 'template-parts/content', 'page' );			
+
 			/*
 			<ul>
 02
@@ -65,7 +67,6 @@ wp_reset_postdata();
 </ul>
 */
 			
-			dynamic_sidebar( 'home_wide_1' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			/*if ( comments_open() || get_comments_number() ) {
@@ -74,6 +75,9 @@ wp_reset_postdata();
 
 			// End of the loop.
 		endwhile;
+		
+		
+			dynamic_sidebar( 'home_wide_1' );
 		?>
 
 	</main><!-- .site-main -->
