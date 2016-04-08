@@ -120,8 +120,7 @@ section.widget_search{
 	font-size: 1.5em;
 }
 
-/* TODO: Esto no funciona*/
-.recent-post-slider h2.wp-post-title{
+.recent-post-slider.design-4 .post-list-content .wp-post-title a{
 	color:#fff;
 }
 
